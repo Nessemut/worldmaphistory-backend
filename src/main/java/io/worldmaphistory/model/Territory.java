@@ -1,14 +1,32 @@
 package io.worldmaphistory.model;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import io.worldmaphistory.datechangemaps.ArrayListDateChangeMap;
+import io.worldmaphistory.datechangemaps.BooleanDateChangeMap;
+import lombok.*;
 
 import java.util.ArrayList;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
+
 public class Territory extends Location {
 
-    private ArrayList<Border> borders;
+    private final ArrayListDateChangeMap bordersMap = new ArrayListDateChangeMap();
+    private final BooleanDateChangeMap independentRenderingMap = new BooleanDateChangeMap(false);
+
+
+    public void setBordersInDate(Date date, ArrayList<Border> borders) {
+        bordersMap.put(date, borders);
+    }
+
+    public ArrayList<Border> getBordersInDate(Date date) {
+        return (ArrayList<Border>) bordersMap.getCurrent(date);
+    }
+
+    public void setRendersIndependentlyInDate(Date date, Boolean rendersIndependently) {
+        independentRenderingMap.put(date, rendersIndependently);
+    }
+
+    public Boolean isRenderedIndependentlyInDate(Date date) {
+        return (Boolean) independentRenderingMap.getCurrent(date);
+    }
 
 }

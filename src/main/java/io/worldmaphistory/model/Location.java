@@ -1,12 +1,11 @@
 package io.worldmaphistory.model;
 
-import io.worldmaphistory.model.changemaps.StringDateChangeMap;
-import lombok.Data;
+import io.worldmaphistory.datechangemaps.StringDateChangeMap;
 
-@Data
-public class Location {
 
-    private StringDateChangeMap nameMap = new StringDateChangeMap();
+public class Location extends RelevantObject {
+
+    private final StringDateChangeMap nameMap = new StringDateChangeMap();
 
     public String getNameInDate(Date date) {
         return (String) nameMap.getCurrent(date);

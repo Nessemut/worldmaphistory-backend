@@ -1,5 +1,6 @@
 package io.worldmaphistory.model;
 
+import io.worldmaphistory.model.enums.EventType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -8,5 +9,9 @@ import lombok.EqualsAndHashCode;
 public class Battle extends Event {
 
     private War war;
+
+    public Battle() {
+        super(EventType.BATTLE);
+    }
 
 }

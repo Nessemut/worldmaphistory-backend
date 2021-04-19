@@ -1,4 +1,4 @@
-package io.worldmaphistory.model.changemaps;
+package io.worldmaphistory.datechangemaps;
 
 public class StringDateChangeMap extends DateChangeMap {
 

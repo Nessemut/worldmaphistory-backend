@@ -1,18 +1,19 @@
 package io.worldmaphistory.model;
 
-import io.worldmaphistory.model.changemaps.DomainsDateChangeMap;
-import io.worldmaphistory.model.changemaps.PersonDateChangeMap;
-import io.worldmaphistory.model.changemaps.PointDateChangeMap;
-import io.worldmaphistory.model.changemaps.StringDateChangeMap;
-import lombok.Data;
+import io.worldmaphistory.datechangemaps.ArrayListDateChangeMap;
+import io.worldmaphistory.datechangemaps.PersonDateChangeMap;
+import io.worldmaphistory.datechangemaps.PointDateChangeMap;
+import io.worldmaphistory.datechangemaps.StringDateChangeMap;
 
-@Data
-public class Civilization {
+import java.util.ArrayList;
 
-    private PersonDateChangeMap rulerMap = new PersonDateChangeMap();
-    private StringDateChangeMap nameMap = new StringDateChangeMap();
-    private PointDateChangeMap capitalMap = new PointDateChangeMap();
-    private DomainsDateChangeMap domainsMap = new DomainsDateChangeMap();
+
+public class Civilization extends RelevantObject implements Eventable {
+
+    private final PersonDateChangeMap rulerMap = new PersonDateChangeMap();
+    private final StringDateChangeMap nameMap = new StringDateChangeMap();
+    private final PointDateChangeMap capitalMap = new PointDateChangeMap();
+    private final ArrayListDateChangeMap territoriesMap = new ArrayListDateChangeMap();
 
 
     public City getCapitalInDate(Date date) {
@@ -39,12 +40,16 @@ public class Civilization {
         rulerMap.put(date, currentRuler);
     }
 
-    public Domains getDomainsInDate(Date date) {
-        return (Domains) domainsMap.getCurrent(date);
+    public ArrayList<Territory> getTerritoriesInDate(Date date) {
+        return (ArrayList<Territory>) territoriesMap.getCurrent(date);
     }
 
-    public void setDomainsInDate(Date date, Domains domains) {
-        domainsMap.put(date, domains);
+    public void setTerritoriesInDate(Date date, ArrayList<Territory> territories) {
+        territoriesMap.put(date, territories);
     }
 
+    @Override
+    public ArrayList<Event> getEvents(Date date) {
+        return null;
+    }
 }

@@ -1,12 +1,13 @@
 package io.worldmaphistory.model;
 
+import lombok.Data;
 
+@Data
 public class Date {
 
     private Integer year;
     private Integer month;
     private Integer day;
-
     private Boolean confirmed = true;
 
     public Date(Integer year){
@@ -21,30 +22,6 @@ public class Date {
         this.setYear(year);
         this.setMonth(month);
         this.setDay(day);
-    }
-
-    public Integer getYear() {
-        return year;
-    }
-
-    public void setYear(Integer year) {
-        this.year = year;
-    }
-
-    public Integer getMonth() {
-        return month;
-    }
-
-    public void setMonth(Integer month) {
-        this.month = month;
-    }
-
-    public Integer getDay() {
-        return day;
-    }
-
-    public void setDay(Integer day) {
-        this.day = day;
     }
 
     public Boolean before(Date date) {
@@ -66,14 +43,6 @@ public class Date {
 
     public Boolean after(Date date) {
         return !this.before(date);
-    }
-
-    public Boolean getConfirmed() {
-        return confirmed;
-    }
-
-    public void setConfirmed(Boolean confirmed) {
-        this.confirmed = confirmed;
     }
 
     @Override
