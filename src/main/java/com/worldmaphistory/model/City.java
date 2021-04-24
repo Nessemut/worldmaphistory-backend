@@ -19,8 +19,8 @@ public class City extends Point implements Eventable {
         return isPopulatedOnDateMap.getEarliestChangeDate();
     }
 
-    public boolean isPopulatedOnDate(Date date){
-        return (boolean) isPopulatedOnDateMap.get(date);
+    public Boolean isPopulatedOnDate(Date date){
+        return (Boolean) isPopulatedOnDateMap.get(date);
     }
 
     public void setPopulatedOnDate(Date date, Boolean isPopulated){
