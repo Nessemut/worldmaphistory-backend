@@ -9,4 +9,6 @@ public class Border {
 
     private ArrayList<Coordinates> coordinates;
 
+    private String name;
+
 }

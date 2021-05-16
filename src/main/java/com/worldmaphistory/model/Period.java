@@ -4,7 +4,7 @@ import com.worldmaphistory.model.enums.PeriodType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -24,7 +24,7 @@ public class Period extends RelevantObject implements Eventable {
     }
 
     @Override
-    public ArrayList<Event> getEvents(Date date) {
+    public List<Event> getEvents(Date date) {
         return null;
     }
 

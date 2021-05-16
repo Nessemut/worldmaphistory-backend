@@ -1,10 +1,10 @@
 package com.worldmaphistory.model;
 
-import com.worldmaphistory.datechangemaps.IntegerDateChangeMap;
+import com.worldmaphistory.model.changemap.date.IntegerDateChangeMap;
 
 public abstract class RelevantObject {
 
-    private final IntegerDateChangeMap importanceMap = new IntegerDateChangeMap();
+    private final IntegerDateChangeMap importanceMap = new IntegerDateChangeMap(0);
 
     public Integer getImportanceInDate(Date date) {
         return (Integer) importanceMap.getCurrent(date);

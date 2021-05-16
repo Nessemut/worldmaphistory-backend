@@ -1,19 +1,19 @@
 package com.worldmaphistory.model;
 
-import com.worldmaphistory.datechangemaps.BooleanDateChangeMap;
+import com.worldmaphistory.model.changemap.date.BooleanDateChangeMap;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Setter;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class City extends Point implements Eventable {
 
     @Setter(AccessLevel.NONE)
-    private BooleanDateChangeMap isPopulatedOnDateMap = new BooleanDateChangeMap(true);
+    private BooleanDateChangeMap isPopulatedOnDateMap = new BooleanDateChangeMap(Boolean.TRUE);
 
     public Date getFoundationDate() {
         return isPopulatedOnDateMap.getEarliestChangeDate();
@@ -28,7 +28,7 @@ public class City extends Point implements Eventable {
     }
 
     @Override
-    public ArrayList<Event> getEvents(Date date) {
+    public List<Event> getEvents(Date date) {
         return null;
     }
 }

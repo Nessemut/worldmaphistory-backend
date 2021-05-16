@@ -35,10 +35,7 @@ public class Date {
 
         if (this.getDay() == null || date.getDay() == null) return false;
 
-        if (this.getDay() < date.getDay()) return true;
-        if (this.getDay() > date.getDay()) return false;
-
-        return false;
+        return this.getDay() < date.getDay();
     }
 
     public Boolean after(Date date) {

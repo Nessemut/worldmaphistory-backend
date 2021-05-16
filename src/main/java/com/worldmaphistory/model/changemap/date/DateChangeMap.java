@@ -1,24 +1,18 @@
-package com.worldmaphistory.datechangemaps;
+package com.worldmaphistory.model.changemap.date;
 
 import com.worldmaphistory.model.Date;
+import com.worldmaphistory.model.changemap.ChangeMap;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 
-public abstract class DateChangeMap extends HashMap<Date, Object> {
+public abstract class DateChangeMap<K, V> extends ChangeMap<Date, V> {
 
-    private final Class T;
-    private final Object defaultValue;
-
-    public DateChangeMap(Class T) {
-        this(T, null);
+    public DateChangeMap() {
+        super(null);
     }
 
-    public DateChangeMap(Class T, Object defaultValue) {
-        super();
-        this.T = T;
-        this.defaultValue = this.T.cast(defaultValue);
+    public DateChangeMap(V defaultValue) {
+        super(defaultValue);
     }
 
     public Object getCurrent(Date date) {
@@ -29,16 +23,16 @@ public abstract class DateChangeMap extends HashMap<Date, Object> {
         if (this.containsKey(date)) {
             return this.get(date);
         }
-        Iterator it = this.entrySet().iterator();
+        Iterator<Entry<Date, V>> it = this.entrySet().iterator();
         Date closest = null;
         while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            Date key = (Date) pair.getKey();
+            Entry<Date, V> pair = it.next();
+            Date key = pair.getKey();
             if ((closest == null && key.before(date)) || (key.before(date) && key.after(closest))) {
                 closest = key;
             }
         }
-        return this.T.cast(this.get(closest));
+        return this.get(closest);
     }
 
     public Date getEarliestChangeDate() {

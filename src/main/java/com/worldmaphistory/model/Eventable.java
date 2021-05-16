@@ -1,10 +1,10 @@
 package com.worldmaphistory.model;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface Eventable {
 
     // TODO: manage automatic event creation for all classes implementing this interface
-    ArrayList<Event> getEvents(Date date);
+    List<Event> getEvents(Date date);
 
 }

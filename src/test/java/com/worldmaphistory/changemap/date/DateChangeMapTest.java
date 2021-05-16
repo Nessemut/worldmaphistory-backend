@@ -1,17 +1,16 @@
-package com.worldmaphistory;
+package com.worldmaphistory.changemap.date;
 
-import com.worldmaphistory.model.City;
-import com.worldmaphistory.model.Civilization;
-import com.worldmaphistory.model.Date;
+import com.worldmaphistory.model.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class DateChangeMapTest {
 
-    @Test
-    public void testChangeMaps() {
+    // TODO: properly test default values setting and retrieval
 
+    @Test
+    public void testDateChangeMaps() {
         Civilization ottomanEmpire = new Civilization();
         ottomanEmpire.setNameInDate(new Date(600), "Turks");
         ottomanEmpire.setNameInDate(new Date(1299), "Ottoman Empire");
@@ -40,7 +39,6 @@ public class DateChangeMapTest {
                 ottomanEmpire.getCapitalInDate(new Date(1914)).getNameInDate(new Date(1914))
         );
         assertEquals("Ottoman Empire", ottomanEmpire.getNameInDate(new Date(1914)));
-
     }
 
 }

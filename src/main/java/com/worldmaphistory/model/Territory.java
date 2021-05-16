@@ -1,7 +1,7 @@
 package com.worldmaphistory.model;
 
-import com.worldmaphistory.datechangemaps.BooleanDateChangeMap;
-import com.worldmaphistory.datechangemaps.TerritoryTypeDateChangeMap;
+import com.worldmaphistory.model.changemap.date.BooleanDateChangeMap;
+import com.worldmaphistory.model.changemap.date.TerritoryTypeDateChangeMap;
 import com.worldmaphistory.model.enums.TerritoryType;
 import lombok.*;
 
@@ -16,6 +16,7 @@ public class Territory extends Location {
     private final BooleanDateChangeMap independentRenderingMap = new BooleanDateChangeMap();
     private final TerritoryTypeDateChangeMap territoryTypeMap = new TerritoryTypeDateChangeMap();
     private final ArrayList<Border> borders = new ArrayList<>();
+    private String name;
 
     public void setRendersIndependentlyInDate(Date date, Boolean rendersIndependently) {
         independentRenderingMap.put(date, rendersIndependently);

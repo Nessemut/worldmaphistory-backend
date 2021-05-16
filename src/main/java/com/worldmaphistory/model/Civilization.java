@@ -1,15 +1,19 @@
 package com.worldmaphistory.model;
 
-import com.worldmaphistory.datechangemaps.*;
+import com.worldmaphistory.model.changemap.date.*;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Civilization extends RelevantObject implements Eventable {
 
-    private final PersonDateChangeMap rulerMap = new PersonDateChangeMap();
+    private final PeopleDateChangeMap rulersMap = new PeopleDateChangeMap();
+
     private final StringDateChangeMap nameMap = new StringDateChangeMap();
+
     private final PointDateChangeMap capitalMap = new PointDateChangeMap();
+
     private final RealmDateChangeMap realmMap = new RealmDateChangeMap();
+
     private final IntegerDateChangeMap populationMap = new IntegerDateChangeMap();
 
 
@@ -29,12 +33,12 @@ public class Civilization extends RelevantObject implements Eventable {
         nameMap.put(date, currentName);
     }
 
-    public Person getRulerInDate(Date date) {
-        return (Person) rulerMap.getCurrent(date);
+    public People getRulersInDate(Date date) {
+        return (People) rulersMap.getCurrent(date);
     }
 
-    public void setRulerInDate(Date date, Person currentRuler) {
-        rulerMap.put(date, currentRuler);
+    public void setRulersInDate(Date date, People currentRuler) {
+        rulersMap.put(date, currentRuler);
     }
 
     public Realm getRealmInDate(Date date) {
@@ -54,7 +58,7 @@ public class Civilization extends RelevantObject implements Eventable {
     }
 
     @Override
-    public ArrayList<Event> getEvents(Date date) {
+    public List<Event> getEvents(Date date) {
         return null;
     }
 }

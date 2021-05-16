@@ -1,6 +1,6 @@
 package com.worldmaphistory.model;
 
-import com.worldmaphistory.datechangemaps.StringDateChangeMap;
+import com.worldmaphistory.model.changemap.date.StringDateChangeMap;
 
 public class Location extends RelevantObject {
 
