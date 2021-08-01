@@ -1,12 +1,12 @@
 spring:
   application:
     name: worldmaphistory-backend
-  jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
-    hibernate.ddl-auto: create
-    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/worldmaphistory
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/worldmaphistory?serverTimezone=UTC
     username: root
     password: root
+
+logging:
+  level:
+    root: warn

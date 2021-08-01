@@ -1,12 +1,30 @@
 package com.worldmaphistory.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+import javax.persistence.*;
+
+@Entity
+@Table(name= "coordinates")
 public class Coordinates {
 
-    private double latitude;
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private double longitude;
+    public Coordinates() {
+    }
+
+    @Getter
+    @Setter
+    @Column(name="lat")
+    private double lat;
+
+    @Getter
+    @Setter
+    @Column(name="lon")
+    private double lon;
 
 }
