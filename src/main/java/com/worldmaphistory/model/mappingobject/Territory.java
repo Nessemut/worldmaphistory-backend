@@ -1,8 +1,8 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import com.worldmaphistory.model.changemap.date.BooleanDateChangeMap;
 import com.worldmaphistory.model.changemap.date.TerritoryTypeDateChangeMap;
-import com.worldmaphistory.model.enums.TerritoryType;
+import com.worldmaphistory.model.mappingobject.enums.TerritoryType;
 import lombok.*;
 
 import java.util.ArrayList;

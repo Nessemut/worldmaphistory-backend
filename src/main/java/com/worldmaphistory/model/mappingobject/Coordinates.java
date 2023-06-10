@@ -1,9 +1,9 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name= "coordinates")
@@ -13,9 +13,6 @@ public class Coordinates {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    public Coordinates() {
-    }
 
     @Getter
     @Setter

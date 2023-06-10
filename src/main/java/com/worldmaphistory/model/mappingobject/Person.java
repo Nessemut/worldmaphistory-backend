@@ -1,6 +1,7 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import com.worldmaphistory.model.changemap.civilization.StringCivilizationChangeMap;
+import java.util.Collections;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -47,6 +48,6 @@ public class Person extends RelevantObject implements Eventable {
 
     @Override
     public List<Event> getEvents(Date date) {
-        return null;
+        return Collections.emptyList();
     }
 }

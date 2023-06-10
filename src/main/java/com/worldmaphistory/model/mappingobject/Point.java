@@ -1,4 +1,4 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

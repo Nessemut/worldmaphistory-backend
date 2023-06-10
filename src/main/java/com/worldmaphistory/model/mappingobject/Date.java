@@ -1,4 +1,4 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import lombok.Data;
 
@@ -10,15 +10,15 @@ public class Date {
     private Integer day;
     private Boolean confirmed = true;
 
-    public Date(Integer year){
+    public Date(Integer year) {
         this(year, null, null);
     }
 
-    public Date(Integer year, Integer month){
+    public Date(Integer year, Integer month) {
         this(year, month, null);
     }
 
-    public Date(Integer year, Integer month, Integer day){
+    public Date(Integer year, Integer month, Integer day) {
         this.setYear(year);
         this.setMonth(month);
         this.setDay(day);
@@ -43,7 +43,7 @@ public class Date {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         if (this.day != null) {
             return this.getYear() + "/" + this.getMonth() + "/" + this.getDay();
         }

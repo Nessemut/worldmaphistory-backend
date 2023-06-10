@@ -1,17 +1,17 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.Date;
+import com.worldmaphistory.model.mappingobject.Date;
 import com.worldmaphistory.model.changemap.ChangeMap;
 
 import java.util.Iterator;
 
-public abstract class DateChangeMap<K, V> extends ChangeMap<Date, V> {
+abstract class DateChangeMap<K, V> extends ChangeMap<Date, V> {
 
-    public DateChangeMap() {
+    protected DateChangeMap() {
         super(null);
     }
 
-    public DateChangeMap(V defaultValue) {
+    protected DateChangeMap(V defaultValue) {
         super(defaultValue);
     }
 

@@ -1,11 +1,9 @@
 package com.worldmaphistory.repository;
 
-import com.worldmaphistory.model.Border;
+import com.worldmaphistory.model.mappingobject.Border;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-
 @Repository
-public interface BorderRepository extends CrudRepository<Border, Long> {
-
+public interface IBorderRepository extends CrudRepository<Border, Long> {
 }

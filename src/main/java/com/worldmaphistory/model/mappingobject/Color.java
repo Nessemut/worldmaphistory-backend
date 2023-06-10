@@ -1,4 +1,4 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 public class Color {
 
@@ -8,14 +8,13 @@ public class Color {
     private final int difference = 25;
 
     public Color(int r, int g, int b) {
-        //TODO: do this with only one if condition
-        if (r > 255){
+        if (r > 255) {
             r = 255;
         }
-        if (g > 255){
+        if (g > 255) {
             g = 255;
         }
-        if (b > 255){
+        if (b > 255) {
             b = 255;
         }
         this.r = r;

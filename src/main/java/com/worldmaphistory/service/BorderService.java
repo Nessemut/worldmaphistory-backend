@@ -1,13 +1,24 @@
 package com.worldmaphistory.service;
 
-import com.worldmaphistory.model.Border;
+import com.worldmaphistory.model.mappingobject.Border;
+import com.worldmaphistory.repository.IBorderRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public interface BorderService {
+@Service
+public class BorderService extends BaseService<Border> {
 
-    List<Border> findAll();
+    public BorderService(IBorderRepository borderRepository) {
+        super(borderRepository);
+    }
 
-    Border save(Border border);
+    public List<Border> findAll() {
+        return (List<Border>) repository.findAll();
+    }
+
+    public void save(Border border) {
+        repository.save(border);
+    }
 
 }

@@ -1,7 +1,7 @@
 package com.worldmaphistory.changemap.civilization;
 
-import com.worldmaphistory.model.Civilization;
-import com.worldmaphistory.model.Person;
+import com.worldmaphistory.model.mappingobject.Civilization;
+import com.worldmaphistory.model.mappingobject.Person;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -19,11 +19,11 @@ public class CivilizationChangeMapTest {
         charles.setAkaInCivilization(spain, "el César");
         charles.setTitleInCivilization(spain, "Rey de España");
         charles.setTitleInCivilization(hre, "Kaiser");
-        assertEquals(charles.getNameInCivilization(spain), "Carlos I");
-        assertEquals(charles.getNameInCivilization(hre), "Karl V");
+        assertEquals("Carlos I", charles.getNameInCivilization(spain));
+        assertEquals("Karl V", charles.getNameInCivilization(hre));
         assertNull(charles.getAkaInCivilization(hre));
-        assertEquals(charles.getTitleInCivilization(spain), "Rey de España");
-        assertEquals(charles.getTitleInCivilization(hre), "Kaiser");
+        assertEquals("Rey de España", charles.getTitleInCivilization(spain));
+        assertEquals("Kaiser", charles.getTitleInCivilization(hre));
     }
 
 }

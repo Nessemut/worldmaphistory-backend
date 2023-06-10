@@ -1,6 +1,7 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import com.worldmaphistory.model.changemap.date.*;
+import java.util.Collections;
 
 import java.util.List;
 
@@ -59,6 +60,7 @@ public class Civilization extends RelevantObject implements Eventable {
 
     @Override
     public List<Event> getEvents(Date date) {
-        return null;
+        //TODO: implement event generation
+        return Collections.emptyList();
     }
 }

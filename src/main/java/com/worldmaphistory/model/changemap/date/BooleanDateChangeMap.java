@@ -1,6 +1,6 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.Date;
+import com.worldmaphistory.model.mappingobject.Date;
 
 public class BooleanDateChangeMap extends DateChangeMap<Date, Boolean> {
 

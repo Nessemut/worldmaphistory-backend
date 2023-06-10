@@ -1,21 +1,17 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
+import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.persistence.*;
 import java.util.List;
 
-@Data
 @Entity
-@Table(name = "border")
+@Data
 public class Border {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    public Border() {
-    }
 
     @ManyToMany(cascade=CascadeType.ALL)
     @JoinTable(
@@ -28,5 +24,4 @@ public class Border {
 
     @Column
     private String name;
-
 }

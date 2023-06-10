@@ -1,6 +1,8 @@
 package com.worldmaphistory.changemap.date;
 
-import com.worldmaphistory.model.*;
+import com.worldmaphistory.model.mappingobject.City;
+import com.worldmaphistory.model.mappingobject.Civilization;
+import com.worldmaphistory.model.mappingobject.Date;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,7 +19,7 @@ public class DateChangeMapTest {
         ottomanEmpire.setNameInDate(new Date(1923), "Turkey");
 
         City constantinople = new City();
-        constantinople.setNameInDate(new Date(-1500), "Bizantium");
+        constantinople.setNameInDate(new Date(-1500), "Byzantium");
         constantinople.setNameInDate(new Date(330), "Constantinople");
         constantinople.setNameInDate(new Date(1453), "Istanbul");
 
@@ -29,7 +31,7 @@ public class DateChangeMapTest {
         ottomanEmpire.setCapitalInDate(new Date(1453), constantinople);
         ottomanEmpire.setCapitalInDate(new Date(1923), ankara);
 
-        assertEquals("Bizantium", constantinople.getNameInDate(new Date(-100)));
+        assertEquals("Byzantium", constantinople.getNameInDate(new Date(-100)));
         assertEquals("Constantinople", constantinople.getNameInDate(new Date(1050)));
         assertEquals("Istanbul", constantinople.getNameInDate(new Date(2020)));
         assertEquals("Ankara",

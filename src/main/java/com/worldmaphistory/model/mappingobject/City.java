@@ -1,4 +1,4 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import com.worldmaphistory.model.changemap.date.BooleanDateChangeMap;
 import lombok.AccessLevel;
@@ -20,7 +20,7 @@ public class City extends Point implements Eventable {
     }
 
     public Boolean isPopulatedOnDate(Date date){
-        return (Boolean) isPopulatedOnDateMap.get(date);
+        return isPopulatedOnDateMap.get(date);
     }
 
     public void setPopulatedOnDate(Date date, Boolean isPopulated){

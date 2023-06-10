@@ -4,16 +4,26 @@ import java.util.HashMap;
 
 public abstract class ChangeMap<K, V> extends HashMap<K, V> {
 
-    protected final V defaultValue;
+    protected final transient V defaultValue;
 
-    public ChangeMap() {
+    protected ChangeMap() {
         super();
         defaultValue = null;
     }
 
-    public ChangeMap(V defaultValue) {
+    protected ChangeMap(V defaultValue) {
         super();
         this.defaultValue = defaultValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 
 }

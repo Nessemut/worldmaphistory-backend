@@ -1,4 +1,4 @@
-package com.worldmaphistory.model;
+package com.worldmaphistory.model.mappingobject;
 
 import com.worldmaphistory.model.changemap.date.StringDateChangeMap;
 

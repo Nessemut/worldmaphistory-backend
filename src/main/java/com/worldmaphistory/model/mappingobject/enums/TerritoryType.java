@@ -1,4 +1,4 @@
-package com.worldmaphistory.model.enums;
+package com.worldmaphistory.model.mappingobject.enums;
 
 public enum TerritoryType {
     PRIMARY,

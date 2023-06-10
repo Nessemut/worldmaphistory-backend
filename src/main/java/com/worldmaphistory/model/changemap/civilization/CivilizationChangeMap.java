@@ -1,15 +1,15 @@
 package com.worldmaphistory.model.changemap.civilization;
 
-import com.worldmaphistory.model.Civilization;
+import com.worldmaphistory.model.mappingobject.Civilization;
 import com.worldmaphistory.model.changemap.ChangeMap;
 
 public abstract class CivilizationChangeMap<K, V> extends ChangeMap<Civilization, V> {
 
-    public CivilizationChangeMap() {
+    protected CivilizationChangeMap() {
         super();
     }
 
-    public CivilizationChangeMap(V defaultValue) {
+    protected CivilizationChangeMap(V defaultValue) {
         super(defaultValue);
     }
 
