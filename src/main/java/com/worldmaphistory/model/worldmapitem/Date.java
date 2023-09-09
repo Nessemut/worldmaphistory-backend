@@ -1,4 +1,4 @@
-package com.worldmaphistory.model.mappingobject;
+package com.worldmaphistory.model.worldmapitem;
 
 import lombok.Data;
 
@@ -9,6 +9,8 @@ public class Date {
     private Integer month;
     private Integer day;
     private Boolean confirmed = true;
+
+    Date() {}
 
     public Date(Integer year) {
         this(year, null, null);

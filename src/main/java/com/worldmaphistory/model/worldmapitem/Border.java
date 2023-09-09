@@ -1,4 +1,4 @@
-package com.worldmaphistory.model.mappingobject;
+package com.worldmaphistory.model.worldmapitem;
 
 import jakarta.persistence.*;
 import lombok.Data;

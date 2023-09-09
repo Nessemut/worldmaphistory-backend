@@ -1,6 +1,6 @@
 package com.worldmaphistory;
 
-import com.worldmaphistory.model.mappingobject.Date;
+import com.worldmaphistory.model.worldmapitem.Date;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

@@ -1,6 +1,6 @@
 package com.worldmaphistory.model.changemap.civilization;
 
-import com.worldmaphistory.model.mappingobject.Civilization;
+import com.worldmaphistory.model.worldmapitem.Civilization;
 import com.worldmaphistory.model.changemap.ChangeMap;
 
 public abstract class CivilizationChangeMap<K, V> extends ChangeMap<Civilization, V> {

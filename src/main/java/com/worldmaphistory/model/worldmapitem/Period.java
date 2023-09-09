@@ -1,6 +1,6 @@
-package com.worldmaphistory.model.mappingobject;
+package com.worldmaphistory.model.worldmapitem;
 
-import com.worldmaphistory.model.mappingobject.enums.PeriodType;
+import com.worldmaphistory.model.worldmapitem.enums.PeriodType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

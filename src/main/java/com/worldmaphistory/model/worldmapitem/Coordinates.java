@@ -1,4 +1,4 @@
-package com.worldmaphistory.model.mappingobject;
+package com.worldmaphistory.model.worldmapitem;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +21,7 @@ public class Coordinates {
 
     @Getter
     @Setter
-    @Column(name="lon")
-    private double lon;
+    @Column(name="lng")
+    private double lng;
 
 }

@@ -1,7 +1,7 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.Date;
-import com.worldmaphistory.model.mappingobject.Person;
+import com.worldmaphistory.model.worldmapitem.Date;
+import com.worldmaphistory.model.worldmapitem.Person;
 
 public class PersonDateChangeMap extends DateChangeMap<Date, Person> {
 

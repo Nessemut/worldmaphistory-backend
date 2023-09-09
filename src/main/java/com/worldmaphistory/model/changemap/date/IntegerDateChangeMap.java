@@ -1,6 +1,6 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.Date;
+import com.worldmaphistory.model.worldmapitem.Date;
 
 public class IntegerDateChangeMap extends DateChangeMap<Date, Integer> {
 

@@ -1,6 +1,6 @@
-package com.worldmaphistory.model.mappingobject.dto;
+package com.worldmaphistory.model.worldmapitem.dto;
 
-import com.worldmaphistory.model.mappingobject.Coordinates;
+import com.worldmaphistory.model.worldmapitem.Coordinates;
 import lombok.Data;
 
 import java.util.List;

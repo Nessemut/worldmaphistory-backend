@@ -1,7 +1,7 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.Date;
-import com.worldmaphistory.model.mappingobject.Realm;
+import com.worldmaphistory.model.worldmapitem.Date;
+import com.worldmaphistory.model.worldmapitem.Realm;
 
 public class RealmDateChangeMap extends DateChangeMap<Date, Realm> {
 

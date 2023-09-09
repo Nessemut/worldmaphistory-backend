@@ -1,6 +1,6 @@
 package com.worldmaphistory.service;
 
-import com.worldmaphistory.model.mappingobject.Border;
+import com.worldmaphistory.model.worldmapitem.Border;
 import com.worldmaphistory.repository.IBorderRepository;
 import org.springframework.stereotype.Service;
 

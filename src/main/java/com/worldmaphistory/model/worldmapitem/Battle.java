@@ -1,6 +1,6 @@
-package com.worldmaphistory.model.mappingobject;
+package com.worldmaphistory.model.worldmapitem;
 
-import com.worldmaphistory.model.mappingobject.enums.EventType;
+import com.worldmaphistory.model.worldmapitem.enums.EventType;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

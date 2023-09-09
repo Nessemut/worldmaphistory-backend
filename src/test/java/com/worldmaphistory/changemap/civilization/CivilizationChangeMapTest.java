@@ -1,7 +1,7 @@
 package com.worldmaphistory.changemap.civilization;
 
-import com.worldmaphistory.model.mappingobject.Civilization;
-import com.worldmaphistory.model.mappingobject.Person;
+import com.worldmaphistory.model.worldmapitem.Civilization;
+import com.worldmaphistory.model.worldmapitem.Person;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

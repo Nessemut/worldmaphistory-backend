@@ -1,8 +1,8 @@
 package com.worldmaphistory.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.City;
-import com.worldmaphistory.model.mappingobject.Civilization;
-import com.worldmaphistory.model.mappingobject.Date;
+import com.worldmaphistory.model.worldmapitem.City;
+import com.worldmaphistory.model.worldmapitem.Civilization;
+import com.worldmaphistory.model.worldmapitem.Date;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

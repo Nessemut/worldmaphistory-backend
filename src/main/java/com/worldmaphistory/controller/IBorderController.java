@@ -1,11 +1,8 @@
 package com.worldmaphistory.controller;
 
-import com.worldmaphistory.model.mappingobject.dto.BorderDto;
+import com.worldmaphistory.model.worldmapitem.dto.BorderDto;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,7 +12,9 @@ public interface IBorderController {
     @GetMapping
     List<BorderDto> getAll();
 
+    //TODO: manage CORS filter only when running locally
     @PostMapping
+    @CrossOrigin(origins = "http://127.0.0.1:3000")
     HttpStatus postBorder(@RequestBody BorderDto border);
 
 }

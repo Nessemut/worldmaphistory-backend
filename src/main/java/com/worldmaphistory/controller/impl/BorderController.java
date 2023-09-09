@@ -1,8 +1,8 @@
 package com.worldmaphistory.controller.impl;
 
 import com.worldmaphistory.controller.IBorderController;
-import com.worldmaphistory.model.mappingobject.Border;
-import com.worldmaphistory.model.mappingobject.dto.BorderDto;
+import com.worldmaphistory.model.worldmapitem.Border;
+import com.worldmaphistory.model.worldmapitem.dto.BorderDto;
 import com.worldmaphistory.service.BorderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestBody;

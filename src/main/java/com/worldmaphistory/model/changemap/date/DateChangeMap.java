@@ -1,6 +1,6 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.Date;
+import com.worldmaphistory.model.worldmapitem.Date;
 import com.worldmaphistory.model.changemap.ChangeMap;
 
 import java.util.Iterator;

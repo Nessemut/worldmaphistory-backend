@@ -1,7 +1,7 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.Color;
-import com.worldmaphistory.model.mappingobject.Date;
+import com.worldmaphistory.model.worldmapitem.Color;
+import com.worldmaphistory.model.worldmapitem.Date;
 
 public class ColorDateChangeMap extends DateChangeMap<Date, Color> {
 

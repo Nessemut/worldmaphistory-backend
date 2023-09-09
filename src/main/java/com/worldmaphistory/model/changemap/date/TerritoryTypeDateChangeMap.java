@@ -1,7 +1,7 @@
 package com.worldmaphistory.model.changemap.date;
 
-import com.worldmaphistory.model.mappingobject.Date;
-import com.worldmaphistory.model.mappingobject.enums.TerritoryType;
+import com.worldmaphistory.model.worldmapitem.Date;
+import com.worldmaphistory.model.worldmapitem.enums.TerritoryType;
 
 public class TerritoryTypeDateChangeMap extends DateChangeMap<Date, TerritoryType> {
 

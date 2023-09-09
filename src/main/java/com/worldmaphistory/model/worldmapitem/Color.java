@@ -1,11 +1,11 @@
-package com.worldmaphistory.model.mappingobject;
+package com.worldmaphistory.model.worldmapitem;
 
 public class Color {
 
     private final int r;
     private final int g;
     private final int b;
-    private final int difference = 25;
+    private static final int DIFFERENCE = 25;
 
     public Color(int r, int g, int b) {
         if (r > 255) {
@@ -23,15 +23,15 @@ public class Color {
     }
 
     public Color getSecondary() {
-        return new Color(this.r + difference, this.g + difference, this.b + difference);
+        return new Color(this.r + DIFFERENCE, this.g + DIFFERENCE, this.b + DIFFERENCE);
     }
 
     public Color getTertiary() {
-        return new Color(this.r + 2*difference, this.g + 2*difference, this.b + 2*difference);
+        return new Color(this.r + 2* DIFFERENCE, this.g + 2* DIFFERENCE, this.b + 2* DIFFERENCE);
     }
 
     public Color getQuaternary() {
-        return new Color(this.r + 3*difference, this.g + 3*difference, this.b + 3*difference);
+        return new Color(this.r + 3* DIFFERENCE, this.g + 3* DIFFERENCE, this.b + 3* DIFFERENCE);
     }
 
     @Override
